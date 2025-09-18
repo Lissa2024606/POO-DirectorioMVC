@@ -16,6 +16,7 @@
         private List<Grado> HistorialAcademico { get; set; }
         private List<Cargo> HistorialLaboral { get; set; }
 
+
         public Persona()
         {
 
@@ -41,6 +42,51 @@
             this.HistorialLaboral = new List<Cargo>();
 
         }
+
+        public Persona (string nombres, string apellidos)
+        {
+            this.Nombres = nombres;
+            this.Apellidos = apellidos;
+        }
+
+
+        public void setNombres(string p_nombres)
+        {
+            this.Nombres = p_nombres;
+        }
+
+        public string getNombres()
+        {
+            return this.Nombres;
+        }
+
+
+        public void setApellidos(string p_apellidos)
+        {
+            this.Apellidos = p_apellidos;
+        }
+
+        public string getApellidos()
+        {
+            return this.Apellidos;
+        }
+
+        public string getNombreCompleto()
+        {
+            return this.Nombres + " " + this.Apellidos;
+        }
+
+
+        public void setCiudad(string p_ciudad)
+        {
+            this.Ciudad = p_ciudad;
+        }
+
+
+
+
+
+
 
         public void AgregarGrado(Grado nuevoGrado)
         {
@@ -74,5 +120,10 @@
             {
                 cargo.Imprimir();
             }
-}
+
+
+        }
+
+
     }
+}

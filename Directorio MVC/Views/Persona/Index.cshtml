@@ -1,6 +1,8 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Directorio_MVC.Models.Persona  
+
 @{
+    string nombre = Model.getNombres();
 }
-<h1> Vista Persona</h1>
+<h1> Informacion de la persona</h1>
+<p> Nombre: @Model.getNombres()</p>
+<p> Apellido: @Model.getApellidos()</p>
